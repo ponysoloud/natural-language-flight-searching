@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		935996CD20ED4A81009C0C74 /* NLFlightSearching.h in Headers */ = {isa = PBXBuildFile; fileRef = 935996CB20ED4A81009C0C74 /* NLFlightSearching.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9387910320EE6D9300871809 /* NLFlightSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910220EE6D9300871809 /* NLFlightSearching.swift */; };
+		9387910520EE735F00871809 /* NLTagger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910420EE735F00871809 /* NLTagger+Extensions.swift */; };
+		9387910720EE7E7000871809 /* NLFlightSearchingSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910620EE7E7000871809 /* NLFlightSearchingSentence.swift */; };
+		9387910D20EE83EC00871809 /* NLLocationEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910C20EE83EC00871809 /* NLLocationEnvironment.swift */; };
+		9387910F20EE843900871809 /* NLDateEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910E20EE843900871809 /* NLDateEnvironment.swift */; };
+		9387911120EE847100871809 /* NLTagEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387911020EE847100871809 /* NLTagEnvironment.swift */; };
+		9387911920EE97B900871809 /* NLLocationTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387911820EE97B900871809 /* NLLocationTagger.swift */; };
+		9387911B20EE97C400871809 /* NLDateTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387911A20EE97C400871809 /* NLDateTagger.swift */; };
+		9387911D20EE97E500871809 /* NLCustomTagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387911C20EE97E500871809 /* NLCustomTagger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		935996C820ED4A81009C0C74 /* NLFlightSearching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NLFlightSearching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		935996CB20ED4A81009C0C74 /* NLFlightSearching.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLFlightSearching.h; sourceTree = "<group>"; };
 		935996CC20ED4A81009C0C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9387910220EE6D9300871809 /* NLFlightSearching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLFlightSearching.swift; sourceTree = "<group>"; };
+		9387910420EE735F00871809 /* NLTagger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NLTagger+Extensions.swift"; sourceTree = "<group>"; };
+		9387910620EE7E7000871809 /* NLFlightSearchingSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLFlightSearchingSentence.swift; sourceTree = "<group>"; };
+		9387910C20EE83EC00871809 /* NLLocationEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLLocationEnvironment.swift; sourceTree = "<group>"; };
+		9387910E20EE843900871809 /* NLDateEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLDateEnvironment.swift; sourceTree = "<group>"; };
+		9387911020EE847100871809 /* NLTagEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLTagEnvironment.swift; sourceTree = "<group>"; };
+		9387911820EE97B900871809 /* NLLocationTagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLLocationTagger.swift; sourceTree = "<group>"; };
+		9387911A20EE97C400871809 /* NLDateTagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLDateTagger.swift; sourceTree = "<group>"; };
+		9387911C20EE97E500871809 /* NLCustomTagger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLCustomTagger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +65,34 @@
 			isa = PBXGroup;
 			children = (
 				935996CB20ED4A81009C0C74 /* NLFlightSearching.h */,
+				9387910220EE6D9300871809 /* NLFlightSearching.swift */,
+				9387910620EE7E7000871809 /* NLFlightSearchingSentence.swift */,
+				9387911020EE847100871809 /* NLTagEnvironment.swift */,
+				9387911C20EE97E500871809 /* NLCustomTagger.swift */,
+				9387912220EEB01800871809 /* NLDate */,
+				9387911220EE8E7500871809 /* NLLocation */,
+				9387910420EE735F00871809 /* NLTagger+Extensions.swift */,
 				935996CC20ED4A81009C0C74 /* Info.plist */,
 			);
 			path = NLFlightSearching;
+			sourceTree = "<group>";
+		};
+		9387911220EE8E7500871809 /* NLLocation */ = {
+			isa = PBXGroup;
+			children = (
+				9387911820EE97B900871809 /* NLLocationTagger.swift */,
+				9387910C20EE83EC00871809 /* NLLocationEnvironment.swift */,
+			);
+			path = NLLocation;
+			sourceTree = "<group>";
+		};
+		9387912220EEB01800871809 /* NLDate */ = {
+			isa = PBXGroup;
+			children = (
+				9387911A20EE97C400871809 /* NLDateTagger.swift */,
+				9387910E20EE843900871809 /* NLDateEnvironment.swift */,
+			);
+			path = NLDate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +138,7 @@
 				TargetAttributes = {
 					935996C720ED4A81009C0C74 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -130,6 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9387911B20EE97C400871809 /* NLDateTagger.swift in Sources */,
+				9387910F20EE843900871809 /* NLDateEnvironment.swift in Sources */,
+				9387910D20EE83EC00871809 /* NLLocationEnvironment.swift in Sources */,
+				9387910720EE7E7000871809 /* NLFlightSearchingSentence.swift in Sources */,
+				9387910320EE6D9300871809 /* NLFlightSearching.swift in Sources */,
+				9387911120EE847100871809 /* NLTagEnvironment.swift in Sources */,
+				9387911920EE97B900871809 /* NLLocationTagger.swift in Sources */,
+				9387911D20EE97E500871809 /* NLCustomTagger.swift in Sources */,
+				9387910520EE735F00871809 /* NLTagger+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +312,7 @@
 		935996D120ED4A81009C0C74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.baseteam.NLFlightSearching;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +339,7 @@
 		935996D220ED4A81009C0C74 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

@@ -14,16 +14,6 @@
 		935996EA20ED4B6F009C0C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935996E820ED4B6F009C0C74 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		935996F620ED4C0F009C0C74 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 935996F220ED4C0F009C0C74 /* NLFlightSearching.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 935996C820ED4A81009C0C74;
-			remoteInfo = NLFlightSearching;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		935996DC20ED4B6D009C0C74 /* NLFlightSearchingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NLFlightSearchingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		935996DF20ED4B6D009C0C74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +22,6 @@
 		935996E620ED4B6F009C0C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		935996E920ED4B6F009C0C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		935996EB20ED4B6F009C0C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		935996F220ED4C0F009C0C74 /* NLFlightSearching.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NLFlightSearching.xcodeproj; path = ../NLFlightSearching.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +40,6 @@
 			children = (
 				935996DE20ED4B6D009C0C74 /* NLFlightSearchingExample */,
 				935996DD20ED4B6D009C0C74 /* Products */,
-				935996F220ED4C0F009C0C74 /* NLFlightSearching.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,14 +62,6 @@
 				935996EB20ED4B6F009C0C74 /* Info.plist */,
 			);
 			path = NLFlightSearchingExample;
-			sourceTree = "<group>";
-		};
-		935996F320ED4C0F009C0C74 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				935996F720ED4C0F009C0C74 /* NLFlightSearching.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,28 +110,12 @@
 			mainGroup = 935996D320ED4B6D009C0C74;
 			productRefGroup = 935996DD20ED4B6D009C0C74 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 935996F320ED4C0F009C0C74 /* Products */;
-					ProjectRef = 935996F220ED4C0F009C0C74 /* NLFlightSearching.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				935996DB20ED4B6D009C0C74 /* NLFlightSearchingExample */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		935996F720ED4C0F009C0C74 /* NLFlightSearching.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = NLFlightSearching.framework;
-			remoteRef = 935996F620ED4C0F009C0C74 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		935996DA20ED4B6D009C0C74 /* Resources */ = {
