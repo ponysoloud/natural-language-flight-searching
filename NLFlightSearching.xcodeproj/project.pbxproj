@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9357C27C20EFB3ED00C57C43 /* SpeechHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C27B20EFB3ED00C57C43 /* SpeechHandler.swift */; };
+		9357C27F20EFE22000C57C43 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C27E20EFE22000C57C43 /* SpeechRecognizer.swift */; };
+		9357C28120F00F9400C57C43 /* SpeechHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C28020F00F9400C57C43 /* SpeechHandlerDelegate.swift */; };
 		935996CD20ED4A81009C0C74 /* NLFlightSearching.h in Headers */ = {isa = PBXBuildFile; fileRef = 935996CB20ED4A81009C0C74 /* NLFlightSearching.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9387910320EE6D9300871809 /* NLFlightSearching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910220EE6D9300871809 /* NLFlightSearching.swift */; };
+		9387910320EE6D9300871809 /* KeywordsSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910220EE6D9300871809 /* KeywordsSearcher.swift */; };
 		9387910520EE735F00871809 /* NLTagger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910420EE735F00871809 /* NLTagger+Extensions.swift */; };
-		9387910720EE7E7000871809 /* NLFlightSearchingSentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910620EE7E7000871809 /* NLFlightSearchingSentence.swift */; };
+		9387910720EE7E7000871809 /* KeywordsSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910620EE7E7000871809 /* KeywordsSearchResult.swift */; };
 		9387910D20EE83EC00871809 /* NLLocationEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910C20EE83EC00871809 /* NLLocationEnvironment.swift */; };
 		9387910F20EE843900871809 /* NLDateEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387910E20EE843900871809 /* NLDateEnvironment.swift */; };
 		9387911120EE847100871809 /* NLTagEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387911020EE847100871809 /* NLTagEnvironment.swift */; };
@@ -20,12 +23,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9357C27B20EFB3ED00C57C43 /* SpeechHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHandler.swift; sourceTree = "<group>"; };
+		9357C27E20EFE22000C57C43 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		9357C28020F00F9400C57C43 /* SpeechHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHandlerDelegate.swift; sourceTree = "<group>"; };
 		935996C820ED4A81009C0C74 /* NLFlightSearching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NLFlightSearching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		935996CB20ED4A81009C0C74 /* NLFlightSearching.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLFlightSearching.h; sourceTree = "<group>"; };
 		935996CC20ED4A81009C0C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9387910220EE6D9300871809 /* NLFlightSearching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLFlightSearching.swift; sourceTree = "<group>"; };
+		9387910220EE6D9300871809 /* KeywordsSearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsSearcher.swift; sourceTree = "<group>"; };
 		9387910420EE735F00871809 /* NLTagger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NLTagger+Extensions.swift"; sourceTree = "<group>"; };
-		9387910620EE7E7000871809 /* NLFlightSearchingSentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLFlightSearchingSentence.swift; sourceTree = "<group>"; };
+		9387910620EE7E7000871809 /* KeywordsSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordsSearchResult.swift; sourceTree = "<group>"; };
 		9387910C20EE83EC00871809 /* NLLocationEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLLocationEnvironment.swift; sourceTree = "<group>"; };
 		9387910E20EE843900871809 /* NLDateEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLDateEnvironment.swift; sourceTree = "<group>"; };
 		9387911020EE847100871809 /* NLTagEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLTagEnvironment.swift; sourceTree = "<group>"; };
@@ -45,6 +51,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9357C27D20EFB95500C57C43 /* KeywordsSearcher */ = {
+			isa = PBXGroup;
+			children = (
+				9387910220EE6D9300871809 /* KeywordsSearcher.swift */,
+				9387910620EE7E7000871809 /* KeywordsSearchResult.swift */,
+				9387911020EE847100871809 /* NLTagEnvironment.swift */,
+				9387911C20EE97E500871809 /* NLCustomTagger.swift */,
+				9387910420EE735F00871809 /* NLTagger+Extensions.swift */,
+				9387912220EEB01800871809 /* NLDate */,
+				9387911220EE8E7500871809 /* NLLocation */,
+			);
+			path = KeywordsSearcher;
+			sourceTree = "<group>";
+		};
 		935996BE20ED4A81009C0C74 = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				935996CB20ED4A81009C0C74 /* NLFlightSearching.h */,
-				9387910220EE6D9300871809 /* NLFlightSearching.swift */,
-				9387910620EE7E7000871809 /* NLFlightSearchingSentence.swift */,
-				9387911020EE847100871809 /* NLTagEnvironment.swift */,
-				9387911C20EE97E500871809 /* NLCustomTagger.swift */,
-				9387912220EEB01800871809 /* NLDate */,
-				9387911220EE8E7500871809 /* NLLocation */,
-				9387910420EE735F00871809 /* NLTagger+Extensions.swift */,
+				9357C27B20EFB3ED00C57C43 /* SpeechHandler.swift */,
+				9357C28020F00F9400C57C43 /* SpeechHandlerDelegate.swift */,
+				9357C27E20EFE22000C57C43 /* SpeechRecognizer.swift */,
+				9357C27D20EFB95500C57C43 /* KeywordsSearcher */,
 				935996CC20ED4A81009C0C74 /* Info.plist */,
 			);
 			path = NLFlightSearching;
@@ -176,12 +193,15 @@
 			files = (
 				9387911B20EE97C400871809 /* NLDateTagger.swift in Sources */,
 				9387910F20EE843900871809 /* NLDateEnvironment.swift in Sources */,
+				9357C27F20EFE22000C57C43 /* SpeechRecognizer.swift in Sources */,
 				9387910D20EE83EC00871809 /* NLLocationEnvironment.swift in Sources */,
-				9387910720EE7E7000871809 /* NLFlightSearchingSentence.swift in Sources */,
-				9387910320EE6D9300871809 /* NLFlightSearching.swift in Sources */,
+				9387910720EE7E7000871809 /* KeywordsSearchResult.swift in Sources */,
+				9387910320EE6D9300871809 /* KeywordsSearcher.swift in Sources */,
 				9387911120EE847100871809 /* NLTagEnvironment.swift in Sources */,
+				9357C28120F00F9400C57C43 /* SpeechHandlerDelegate.swift in Sources */,
 				9387911920EE97B900871809 /* NLLocationTagger.swift in Sources */,
 				9387911D20EE97E500871809 /* NLCustomTagger.swift in Sources */,
+				9357C27C20EFB3ED00C57C43 /* SpeechHandler.swift in Sources */,
 				9387910520EE735F00871809 /* NLTagger+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

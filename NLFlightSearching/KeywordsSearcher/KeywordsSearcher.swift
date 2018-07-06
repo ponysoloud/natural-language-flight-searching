@@ -1,5 +1,5 @@
 //
-//  NLFlightSearching.swift
+//  KeywordsSearcher.swift
 //  NLFlightSearching
 //
 //  Created by Александр Пономарев on 05.07.2018.
@@ -9,14 +9,12 @@
 import Foundation
 import NaturalLanguage
 
-class NLFlightSearching {
+class KeywordsSearcher {
 
     var locationTagger: NLLocationTagger?
     var dateTagger: NLDateTagger?
 
-    init() {}
-
-    public func enumerateTags(in text: String) -> NLFlightSearchingSentence {
+    func keywords(in text: String) -> KeywordsSearchResult {
         let locations = locationTagger?.keywords(in: text)
         //let dates = dateTagger?.keywords(in: text)
 
@@ -25,6 +23,6 @@ class NLFlightSearching {
 
         //let numAndWordDates: [Date]? = dates?[NLTag.numberAndWordDate]
 
-        return NLFlightSearchingSentence(naturalText: text, toLocation: toLocations, fromLocation: fromLocations, date: nil)
+        return KeywordsSearchResult(naturalText: text, toLocation: toLocations, fromLocation: fromLocations, date: nil)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  NLFlightSearchingSentence.swift
+//  KeywordsSearchResult.swift
 //  NLFlightSearching
 //
 //  Created by Александр Пономарев on 05.07.2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NLFlightSearchingSentence {
+struct KeywordsSearchResult {
 
     let naturalText: String
 

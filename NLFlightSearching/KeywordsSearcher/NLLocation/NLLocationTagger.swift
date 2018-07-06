@@ -27,17 +27,17 @@ struct NLLocationTagger: NLCustomTagger {
                              scheme: environment.tagScheme,
                              options: environment.options) { (tag, range) -> Bool in
 
-            if let t = tag, environment.tags.contains(t) {
-                let keyword = String(text[range])
+                                if let t = tag, environment.tags.contains(t) {
+                                    let keyword = String(text[range])
 
-                if keywords.keys.contains(t) {
-                    keywords[t]!.append(keyword)
-                } else {
-                    keywords[t] = [keyword]
-                }
-            }
+                                    if keywords.keys.contains(t) {
+                                        keywords[t]!.append(keyword)
+                                    } else {
+                                        keywords[t] = [keyword]
+                                    }
+                                }
 
-            return true
+                                return true
         }
 
         return keywords
