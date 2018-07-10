@@ -21,7 +21,11 @@ class SpeechHandler {
     weak var delegate: SpeechHandlerDelegate?
 
     private let recognizer: SpeechRecognizer
-    private var accessibilityStatus: SpeechHandlerStatus = .inaccessible
+    private(set) var accessibilityStatus: SpeechHandlerStatus = .inaccessible {
+        didSet {
+            delegate?.speechHandler(self, accessibilityStatusDidChangeTo: accessibilityStatus)
+        }
+    }
 
     init(locale: Locale = Locale.current) throws {
         guard let speechRecognizer = SFSpeechRecognizer(locale: locale) else {
@@ -41,15 +45,17 @@ class SpeechHandler {
 
             try recognizer.beginRecordering {
                 [weak self]
-                isFinal, result in
+                isFinal, text in
 
                 guard let strongSelf = self else {
                     return
                 }
 
+                strongSelf.delegate?.speechHandler(strongSelf, recognized: text)
+
                 if isFinal {
                     strongSelf.accessibilityStatus = .ready
-                    
+                    strongSelf.delegate?.speechHandlerDidEndRecognizing(strongSelf, final: text)
                 }
             }
         default:
@@ -89,18 +95,12 @@ class SpeechHandler {
     private func setAccessibilityStatus() {
         switch SFSpeechRecognizer.authorizationStatus() {
         case .authorized:
-            if accessibilityStatus == .requiresAuthorization {
-                guard recognizer.isAvailable else {
-                    accessibilityStatus = .inaccessible
-                    return
-                }
-
+            if accessibilityStatus != .recording {
                 accessibilityStatus = .ready
             }
         default:
             accessibilityStatus = .requiresAuthorization
         }
     }
-
 }
 

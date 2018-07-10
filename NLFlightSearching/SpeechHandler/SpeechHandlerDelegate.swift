@@ -15,5 +15,5 @@ protocol SpeechHandlerDelegate: class {
 
     func speechHandler(_ speechHandler: SpeechHandler, recognized text: String)
 
-    func speechHandlerDidEndRecognizing(_ speechHandler: SpeechHandler, with text: String)
+    func speechHandlerDidEndRecognizing(_ speechHandler: SpeechHandler, final text: String)
 }

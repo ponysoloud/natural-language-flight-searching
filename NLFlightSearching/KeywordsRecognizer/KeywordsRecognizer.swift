@@ -1,5 +1,5 @@
 //
-//  KeywordsSearcher.swift
+//  KeywordsRecognizer.swift
 //  NLFlightSearching
 //
 //  Created by Александр Пономарев on 05.07.2018.
@@ -9,7 +9,7 @@
 import Foundation
 import NaturalLanguage
 
-class KeywordsSearcher {
+class KeywordsRecognizer {
 
     var locationTagger: NLLocationTagger?
     var dateTagger: NLDateTagger?
