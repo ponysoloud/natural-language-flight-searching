@@ -11,18 +11,19 @@ import NaturalLanguage
 
 struct NLLocationTagger: NLCustomTagger {
 
-    let tagger: NLTagger
+    // TODO: makes tagger not optional and uncomment its initialization when model will be ready
+    let tagger: NLTagger? = nil
     let environment: NLLocationEnvironment
 
     init(environment: NLLocationEnvironment) throws {
         self.environment = environment
-        self.tagger = try NLTagger(environment: environment)
+        //self.tagger = try NLTagger(environment: environment)
     }
 
     func keywords(in text: String) -> [NLTag: [String]] {
         var keywords: [NLTag: [String]] = [:]
 
-        tagger.enumerateTags(in: text.startIndex..<text.endIndex,
+        tagger?.enumerateTags(in: text.startIndex..<text.endIndex,
                              unit: .word,
                              scheme: environment.tagScheme,
                              options: environment.options) { (tag, range) -> Bool in

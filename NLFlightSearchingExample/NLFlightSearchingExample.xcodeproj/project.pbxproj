@@ -13,6 +13,8 @@
 		935996E720ED4B6F009C0C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 935996E620ED4B6F009C0C74 /* Assets.xcassets */; };
 		935996EA20ED4B6F009C0C74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 935996E820ED4B6F009C0C74 /* LaunchScreen.storyboard */; };
 		936A7E6220F5167A006A744B /* NLFlightSearching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936A7E6120F5167A006A744B /* NLFlightSearching.framework */; };
+		936A7E6920F66517006A744B /* DialogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936A7E6820F66517006A744B /* DialogTextView.swift */; };
+		936A7E6B20F667A7006A744B /* DialogTextViewAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936A7E6A20F667A7006A744B /* DialogTextViewAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		935996E920ED4B6F009C0C74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		935996EB20ED4B6F009C0C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936A7E6120F5167A006A744B /* NLFlightSearching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NLFlightSearching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		936A7E6820F66517006A744B /* DialogTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogTextView.swift; sourceTree = "<group>"; };
+		936A7E6A20F667A7006A744B /* DialogTextViewAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogTextViewAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				935996DF20ED4B6D009C0C74 /* AppDelegate.swift */,
 				935996E120ED4B6D009C0C74 /* ViewController.swift */,
+				936A7E6820F66517006A744B /* DialogTextView.swift */,
+				936A7E6A20F667A7006A744B /* DialogTextViewAttributes.swift */,
 				935996E320ED4B6D009C0C74 /* Main.storyboard */,
 				935996E620ED4B6F009C0C74 /* Assets.xcassets */,
 				935996E820ED4B6F009C0C74 /* LaunchScreen.storyboard */,
@@ -148,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				935996E220ED4B6D009C0C74 /* ViewController.swift in Sources */,
+				936A7E6B20F667A7006A744B /* DialogTextViewAttributes.swift in Sources */,
 				935996E020ED4B6D009C0C74 /* AppDelegate.swift in Sources */,
+				936A7E6920F66517006A744B /* DialogTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

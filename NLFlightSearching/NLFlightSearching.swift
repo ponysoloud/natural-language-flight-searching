@@ -47,6 +47,10 @@ public class NLFlightSearching: SpeechHandlerDelegate {
 
     public var keywords: [NLFlightSearchingTag: [String]] = [:]
 
+    public var state: SpeechHandlerStatus {
+        return speechManager.accessibilityStatus
+    }
+
     private let speechManager: SpeechHandler
     private let keywordsManager: KeywordsRecognizer
 
@@ -66,6 +70,8 @@ public class NLFlightSearching: SpeechHandlerDelegate {
         } catch {
             throw NLFlightSearchingError.keywordsRecognizerInternalError
         }
+
+        self.speechManager.delegate = self
     }
 
     public func beginSpeechRecordering() throws {
