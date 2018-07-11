@@ -11,18 +11,23 @@ import NaturalLanguage
 
 class KeywordsRecognizer {
 
-    var locationTagger: NLLocationTagger?
-    var dateTagger: NLDateTagger?
+    private var taggers: [NLKeywordsExtractable] = []
 
-    func keywords(in text: String) -> KeywordsSearchResult {
-        let locations = locationTagger?.keywords(in: text)
-        //let dates = dateTagger?.keywords(in: text)
+    func addTagger<Tagger: NLCustomTagger>(_ tagger: Tagger) {
+        taggers.append(tagger)
+    }
 
-        let toLocations: [String]? = locations?[NLTag.toLocation]
-        let fromLocations: [String]? = locations?[NLTag.fromLocation]
+    func keywords(in text: String) -> KeywordsRecognizingResult {
+        var keywords: [NLTag: [String]] = [:]
 
-        //let numAndWordDates: [Date]? = dates?[NLTag.numberAndWordDate]
+        taggers.forEach {
+            let taggerKeywords = $0.keywords(in: text)
 
-        return KeywordsSearchResult(naturalText: text, toLocation: toLocations, fromLocation: fromLocations, date: nil)
+            keywords.merge(taggerKeywords) { current, new in
+                current + new
+            }
+        }
+
+        return KeywordsRecognizingResult(naturalText: text, keywords: keywords)
     }
 }

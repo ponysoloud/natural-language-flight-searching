@@ -102,6 +102,5 @@ class SpeechRecognizer {
 }
 
 enum SpeechRecognizerError: Error {
-    case unsupportedLocale
     case sfSpeechAudioBufferRecognitionRequestCreationFailed
 }

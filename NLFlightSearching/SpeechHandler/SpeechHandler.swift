@@ -9,7 +9,7 @@
 import Foundation
 import Speech
 
-enum SpeechHandlerStatus {
+public enum SpeechHandlerStatus {
     case requiresAuthorization
     case ready
     case recording
@@ -29,7 +29,7 @@ class SpeechHandler {
 
     init(locale: Locale = Locale.current) throws {
         guard let speechRecognizer = SFSpeechRecognizer(locale: locale) else {
-            throw SpeechRecognizerError.unsupportedLocale
+            throw SpeechHandlerError.unsupportedLocale
         }
         self.recognizer = SpeechRecognizer(recognizer: speechRecognizer,
                                            audioEngine: AVAudioEngine())
@@ -43,20 +43,24 @@ class SpeechHandler {
         case .ready:
             accessibilityStatus = .recording
 
-            try recognizer.beginRecordering {
-                [weak self]
-                isFinal, text in
+            do {
+                try recognizer.beginRecordering {
+                    [weak self]
+                    isFinal, text in
 
-                guard let strongSelf = self else {
-                    return
+                    guard let strongSelf = self else {
+                        return
+                    }
+
+                    strongSelf.delegate?.speechHandler(strongSelf, recognized: text)
+
+                    if isFinal {
+                        strongSelf.accessibilityStatus = .ready
+                        strongSelf.delegate?.speechHandlerDidEndRecognizing(strongSelf, final: text)
+                    }
                 }
-
-                strongSelf.delegate?.speechHandler(strongSelf, recognized: text)
-
-                if isFinal {
-                    strongSelf.accessibilityStatus = .ready
-                    strongSelf.delegate?.speechHandlerDidEndRecognizing(strongSelf, final: text)
-                }
+            } catch {
+                throw SpeechHandlerError.speechRecorderingInternalError
             }
         default:
             return
@@ -102,5 +106,10 @@ class SpeechHandler {
             accessibilityStatus = .requiresAuthorization
         }
     }
+}
+
+enum SpeechHandlerError: Error {
+    case unsupportedLocale
+    case speechRecorderingInternalError
 }
 

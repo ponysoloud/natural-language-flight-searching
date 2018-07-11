@@ -7,15 +7,12 @@
 //
 
 import Foundation
+import NaturalLanguage
 
-struct KeywordsSearchResult {
+struct KeywordsRecognizingResult {
 
     let naturalText: String
 
-    let toLocation: [String]?
-
-    let fromLocation: [String]?
-
-    let date: [Date]?
+    let keywords: [NLTag: [String]]
     
 }

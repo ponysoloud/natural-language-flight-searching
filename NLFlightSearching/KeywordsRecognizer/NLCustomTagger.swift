@@ -9,12 +9,14 @@
 import Foundation
 import NaturalLanguage
 
-protocol NLCustomTagger {
+protocol NLCustomTagger: NLKeywordsExtractable {
 
     associatedtype EnvironmentType: NLTagEnvironment
 
     init(environment: EnvironmentType) throws
-    
+}
+
+protocol NLKeywordsExtractable {
 
     func keywords(in text: String) -> [NLTag: [String]]
 }
