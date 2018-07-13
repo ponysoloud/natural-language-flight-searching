@@ -15,8 +15,8 @@ public enum NLFlightSearchingError: Error {
     case keywordsRecognizerInternalError
 }
 
-public enum NLFlightSearchingTag: Int, CaseIterable {
-    case to = 0
+public enum NLFlightSearchingTag: CaseIterable {
+    case to
     case from
     case when
 

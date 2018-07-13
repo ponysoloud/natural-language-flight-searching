@@ -38,6 +38,9 @@ class ViewController: UIViewController, NLFlightSearchingDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.spokenTextView.isUserInteractionEnabled = false
+        self.view.backgroundColor = .black
+
         //recordButton.isEnabled = false
 
         flightSearching = try! NLFlightSearching(locale: Locale(identifier: "ru-RU"))
