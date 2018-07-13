@@ -61,7 +61,9 @@ public class NLFlightSearching: SpeechHandlerDelegate {
             self.keywordsManager = KeywordsRecognizer()
 
             let locationTagger = try NLLocationTagger(environment: NLLocationEnvironment())
+            let dateTagger = try NLDateTagger(environment: NLDateEnvironment())
             self.keywordsManager.addTagger(locationTagger)
+            self.keywordsManager.addTagger(dateTagger)
 
         } catch SpeechHandlerError.unsupportedLocale {
             throw NLFlightSearchingError.unsupportedLocale
@@ -93,7 +95,8 @@ public class NLFlightSearching: SpeechHandlerDelegate {
     }
 
     func speechHandlerDidEndRecognizing(_ speechHandler: SpeechHandler, final text: String) {
-        let keywords = keywordsManager.keywords(in: text).keywords
+        let keywordsObject = keywordsManager.keywords(in: text)
+        let keywords = keywordsObject.keywords
 
         var result: [NLFlightSearchingTag: [String]] = [:]
 

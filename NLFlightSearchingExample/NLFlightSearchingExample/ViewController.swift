@@ -59,7 +59,6 @@ class ViewController: UIViewController, NLFlightSearchingDelegate {
      "Record" button tap
      */
     @IBAction func recordTapped(_ sender: Any) {
-        print("touch")
 
         switch recorderingStatus {
         case .ready:
@@ -97,7 +96,7 @@ class ViewController: UIViewController, NLFlightSearchingDelegate {
 
     func flightSearchingDidEndRecognizing(_ flightSearching: NLFlightSearching, speechRecognized text: String, extractedKeywords: [NLFlightSearchingTag : [String]]) {
 
-        print("Recognized \(text)")
+        print(">>> Recognized text: '\(text)'")
 
         extractedKeywords.forEach { tag, keywords in
             if let word = keywords.first {

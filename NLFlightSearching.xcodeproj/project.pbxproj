@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9335F0D620F8FCA700BEEB2A /* FlightsTagger.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9335F0D520F8FCA700BEEB2A /* FlightsTagger.mlmodel */; };
 		9357C27C20EFB3ED00C57C43 /* SpeechHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C27B20EFB3ED00C57C43 /* SpeechHandler.swift */; };
 		9357C27F20EFE22000C57C43 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C27E20EFE22000C57C43 /* SpeechRecognizer.swift */; };
 		9357C28120F00F9400C57C43 /* SpeechHandlerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9357C28020F00F9400C57C43 /* SpeechHandlerDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9335F0D520F8FCA700BEEB2A /* FlightsTagger.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlightsTagger.mlmodel; sourceTree = "<group>"; };
 		9357C27B20EFB3ED00C57C43 /* SpeechHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHandler.swift; sourceTree = "<group>"; };
 		9357C27E20EFE22000C57C43 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		9357C28020F00F9400C57C43 /* SpeechHandlerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechHandlerDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		935996CA20ED4A81009C0C74 /* NLFlightSearching */ = {
 			isa = PBXGroup;
 			children = (
+				9335F0D520F8FCA700BEEB2A /* FlightsTagger.mlmodel */,
 				935996CB20ED4A81009C0C74 /* NLFlightSearching.h */,
 				936A7E6420F54B8D006A744B /* NLFlightSearching.swift */,
 				936A7E6320F54AFA006A744B /* SpeechHandler */,
@@ -210,6 +213,7 @@
 				9387910320EE6D9300871809 /* KeywordsRecognizer.swift in Sources */,
 				9387911120EE847100871809 /* NLTagEnvironment.swift in Sources */,
 				9357C28120F00F9400C57C43 /* SpeechHandlerDelegate.swift in Sources */,
+				9335F0D620F8FCA700BEEB2A /* FlightsTagger.mlmodel in Sources */,
 				9387911920EE97B900871809 /* NLLocationTagger.swift in Sources */,
 				936A7E6520F54B8D006A744B /* NLFlightSearching.swift in Sources */,
 				9387911D20EE97E500871809 /* NLCustomTagger.swift in Sources */,

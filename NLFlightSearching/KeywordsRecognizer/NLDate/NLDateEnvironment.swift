@@ -24,10 +24,10 @@ struct NLDateEnvironment: NLTagEnvironment {
     }
 
     var models: [URL]? {
-        let modelURL = Bundle.main.url(forResource: "DateTagger", withExtension: "mlmodelc")
-
-        guard let url = modelURL else {
-            return nil
+        guard
+            let bundle = Bundle(identifier: "com.baseteam.NLFlightSearching"),
+            let url = bundle.url(forResource: "FlightsTagger", withExtension: "mlmodelc") else {
+                return nil
         }
 
         return [url]
