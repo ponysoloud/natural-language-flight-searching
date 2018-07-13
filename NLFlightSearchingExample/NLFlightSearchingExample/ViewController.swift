@@ -99,11 +99,15 @@ class ViewController: UIViewController, NLFlightSearchingDelegate {
         print(">>> Recognized text: '\(text)'")
 
         extractedKeywords.forEach { tag, keywords in
+            keywords.forEach { keyword in
+                self.spokenTextView.addMachine(phrase: "\(tag) \(keyword)")
+            }
+            /*
             if let word = keywords.first {
                 self.spokenTextView.addMachine(phrase: "\(tag) \(word)")
             } else {
                 self.spokenTextView.addMachine(phrase: "\(tag) -")
-            }
+            } */
         }
     }
 }
